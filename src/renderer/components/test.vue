@@ -21,7 +21,7 @@
           {{fileContent}}
         </v-card-title>
         <v-card-text>
-          <v-chip color="info" v-for="c in chips">
+          <v-chip color="info" v-for="c in chips" :key="c.name">
             {{c}}
             <v-icon right>school</v-icon>
           </v-chip>
@@ -49,7 +49,8 @@
 </template>
 
 <script>
-  import * as fs from 'fs'
+  import fs from 'fs'
+  // import path from 'path'
 
   export default {
     name: 'test',
@@ -66,6 +67,16 @@
       },
       chips: []
     }),
+    mounted () {
+      // const p = path.join(this.$electron.remote.app.getPath('appData'), '/lda/test.txt')
+      // console.log(this.$electron.remote.app.getPath('appData'))
+      // console.log(this.$electron.remote.app.getName())
+      // const p = this.$electron.remote.app.getPath('appData') + '/elecapp/test.txt'
+      // const p = path.join(this.$electron.remote.app.getPath('appData'), 'elecapp', 'test.txt')
+      // fs.writeFile(p, 'abcde', (err) => {
+      //   if (err) console.log(err)
+      // })
+    },
     methods: {
       pop (msg, cl, t) {
         this.snackbar.act = true

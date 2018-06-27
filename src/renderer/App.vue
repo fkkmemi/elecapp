@@ -55,7 +55,7 @@
         </v-btn>
       </v-toolbar>
       <v-content>
-        <v-container fluid fill-height>
+        <v-container fluid fill-height grid-list-md>
           <v-slide-y-transition mode="out-in">
             <router-view></router-view>
           </v-slide-y-transition>
@@ -95,7 +95,9 @@
       items: [
         { icon: 'cloud', title: '메뉴바꿈!', to: '/' },
         { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' },
-        { icon: 'title', title: 'test', to: '/test' }
+        { icon: 'title', title: 'test', to: '/test' },
+        { icon: 'attachment', title: 'testFile', to: '/testFile' },
+        { icon: 'archive', title: 'testDB', to: '/testDB' }
       ],
       miniVariant: false,
       right: true,
