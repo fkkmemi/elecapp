@@ -31,6 +31,11 @@ export default new Router({
       component: require('@/components/testDB').default
     },
     {
+      path: '/testUI',
+      name: 'testUI',
+      component: require('@/components/testUI').default
+    },
+    {
       path: '*',
       redirect: '/'
     }

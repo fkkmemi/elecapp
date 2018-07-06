@@ -67,7 +67,7 @@
 
 <script>
   export default {
-    name: 'testFile',
+    name: 'testDB',
     data: () => ({
       snackbar: {
         act: false,
